@@ -1,7 +1,7 @@
 
-# 📚 Books API (CRUD) - Flask
+#  Books API (CRUD) - Flask
 
-This is a simple REST API developed in Python using Flask. It allows you to **retrieve**, **create**, **update**, and **delete** books from an in-memory list.
+This is a simple REST API developed in Python using Flask. It allows you to **create**, **read**, **update**, and **delete** books from an in-memory list.
 
 This project was created as a learning exercise, following the tutorial video: [Como CRIAR uma API com PYTHON [DO ZERO]](https://www.youtube.com/watch?v=FBLAV1SbJFk).
 
@@ -133,5 +133,142 @@ This project was created for educational purposes to learn the basics of creatin
 
 - Tutorial video: [https://www.youtube.com/watch?v=FBLAV1SbJFk](https://www.youtube.com/watch?v=FBLAV1SbJFk)
 - Flask Documentation: [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)
+
+---
+
+# (🌍 PT-br) API de Livros (CRUD) - Flask
+
+Esta é uma API REST simples desenvolvida em Python usando Flask. Ela permite  **criar**, **ler**, **atualizar** e **excluir** livros de uma lista na memória.
+
+Este projeto foi criado como um exercício de aprendizado, seguindo o vídeo tutorial: [Como CRIAR uma API com PYTHON [DO ZERO]](https://www.youtube.com/watch?v=FBLAV1SbJFk).
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos:
+
+- Python 3.x instalado
+- Flask instalado (se não estiver instalado, execute: `pip install flask`)
+
+### Passos:
+
+1. Salve o código da API em um arquivo chamado `app.py`.
+
+2. Execute o servidor:
+
+```bash
+python app.py
+```
+
+3. O servidor Flask iniciará em:
+
+```
+http://localhost:5000
+```
+
+---
+
+## 🛠️ Endpoints disponíveis
+
+### 🔍 Obter todos os livros
+
+- **Método:** GET
+- **URL:** `/livros`
+
+**Exemplo de resposta:**
+```json
+[
+{
+"id": 1,
+"titulo": "O Diário de um Banana",
+"autor": "Jeff Kinney"
+},
+...
+]
+```
+
+---
+
+### 🔍 Obter livro por ID
+
+- **Método:** GET
+- **URL:** `/livros/<id>`
+
+**Exemplo:**
+```
+GET /livros/2
+```
+
+**Resposta:**
+```json
+{
+"id": 2,
+"titulo": "Harry Potter e a Pedra Filosofal",
+"autor": "J. K. Rowling"
+}
+```
+
+---
+
+### ➕ Criar um novo livro
+
+- **Método:** POST
+- **URL:** `/livros`
+- **Corpo de Requisição (JSON):**
+```json
+{
+"id": 4,
+"titulo": "Novo Livro",
+"autor": "Exemplo de Autor"
+}
+```
+
+**Resposta:** Lista de livros atualizada.
+
+---
+
+### ✏️ Atualizar um livro existente
+
+- **Método:** PUT
+- **URL:** `/livros/<id>`
+- **Corpo de Requisição (JSON):**
+```json
+{
+"titulo": "Título Atualizado",
+"autor": "Autor Atualizado"
+}
+```
+
+**Resposta:** Livro atualizado.
+
+---
+
+### 🗑️ Excluir um livro
+
+- **Método:** DELETE
+- **URL:** `/livros/<id>`
+
+**Resposta:** Lista de livros após a exclusão.
+
+---
+
+## ✅ Observações Importantes:
+
+- Esta API **não utiliza um banco de dados**. Os dados são armazenados em uma lista simples do Python na memória.
+- Se o servidor for reiniciado, a lista de livros retornará ao seu estado original definido no início do código.
+
+---
+
+## 🎯 Objetivo do Projeto
+
+Este projeto foi criado com fins educacionais para aprender os conceitos básicos da criação de APIs REST usando Python e Flask.
+
+---
+
+## 📖 Fontes de Aprendizado:
+
+- Vídeo tutorial: [https://www.youtube.com/watch?v=FBLAV1SbJFk](https://www.youtube.com/watch?v=FBLAV1SbJFk)
+- Documentação do Flask: [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)
 
 ---
